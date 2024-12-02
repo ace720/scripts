@@ -6,7 +6,8 @@ set -eu -o pipefail
 DIR=/home/ace64/Downloads/temp/
 
 function cleanDir() {
-  if [[ -e $DIR ]]; then
+#check for empty directory
+  if [[ -d $DIR ]]; then
     rm -rf $DIR*
   else
     echo "$DIR does not exist!"
@@ -14,3 +15,5 @@ function cleanDir() {
 }
 
 cleanDir
+
+echo "Exit status: $?"
