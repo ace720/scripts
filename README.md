@@ -20,10 +20,10 @@ If you do like to contribute to scripts automation, here are some guidelines:
 7. Submit a pull request.
 
 ## **License**
-Scripts is released under te MIT License.
+Scripts is released under the MIT License.
 
 ## **Authors and Acknowledgement**
-Scripts automation was created by **Mkadam Msabaha (https://github.com/ace720)**
+Scripts automation was created by **[Mkadam Msabaha] (https://github.com/ace720)**
 
 ## **Contact**
 If you have any questions or comments about Scripts automation, please contact **[Mkadam Msabaha] imkadam@hotmail.my**
