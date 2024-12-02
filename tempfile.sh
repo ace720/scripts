@@ -3,7 +3,7 @@
 set -eu -o pipefail
 
 # Variables
-DIR=/home/ace64/Downloads/temp/
+export DIR=$HOME/Documents/temp/
 
 function cleanDir() {
 #check for empty directory
