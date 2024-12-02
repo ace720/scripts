@@ -5,10 +5,12 @@ set -eu -o pipefail
 # Variables
 DIR=/home/ace64/Downloads/temp/
 
-if [[ -e $DIR ]];
-  then
+function cleanDir() {
+  if [[ -e $DIR ]]; then
     rm -rf $DIR*
-else
-  echo "$dir does not exist!"
-fi
+  else
+    echo "$DIR does not exist!"
+  fi
+}
 
+cleanDir
