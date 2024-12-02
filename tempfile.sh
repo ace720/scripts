@@ -1,11 +1,13 @@
 #!/bin/bash
- 
-# Variables
-dir=/home/ace64/Downloads/temp/
 
-if [[ -e $dir ]];
+set -eu -o pipefail
+
+# Variables
+DIR=/home/ace64/Downloads/temp/
+
+if [[ -e $DIR ]];
   then
-    rm -rf $dir*
+    rm -rf $DIR*
 else
   echo "$dir does not exist!"
 fi
