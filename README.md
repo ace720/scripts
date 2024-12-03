@@ -9,7 +9,7 @@ In this repo, one can find various helpful scripts written in bash for automatin
  2. Also `systemd` timers provide a mechanism to run missed jobs which is an advantage over cron scheduling unless you are using `anacron`.
 
     ### **2.0 Systemd timer concept**
-    With 'systemd' timer units scripts (jobs) can be executed based on the time and date or on events.
+    With `systemd` timer units scripts (jobs) can be executed based on the time and date or on events.
 
     ### **2.1 Creating systemd timer**
     1. First we will create a `systemd` service that tells `systemd` which  application to run.
