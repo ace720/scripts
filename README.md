@@ -79,7 +79,7 @@ If you do like to contribute to scripts automation, here are some guidelines:
 Scripts is released under the MIT License.
 
 ## **Authors and Acknowledgement**
-Scripts automation was created by **[Mkadam Msabaha] (https://github.com/ace720)**
+Scripts automation was created by **[Mkadam Msabaha](https://github.com/ace720)**
 
 ## **Contact**
-If you have any questions or comments about Scripts automation, please contact **[Mkadam Msabaha] imkadam@hotmail.my**
+If you have any questions or comments about Scripts automation, please contact **[Mkadam Msabaha](imkadam@hotmail.my)**
