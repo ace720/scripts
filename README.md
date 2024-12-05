@@ -61,7 +61,7 @@ In this repo, one can find various helpful scripts written in bash for automatin
        * [Working with systemd timers](https://documentation.suse.com/smart/systems-management/html/systemd-working-with-timers/index.html#systemd-timer-types-realtime)
     
 ## **Usage**
-To use scripts from this repository, make sure `temp` directory is available or after cloning the repo edit the `tempfile.sh` script and replace the variable value of `DIR={your-temp-dir}` to your temp dir liking. 
+To use scripts from this repository, make sure `temp` directory is available or after cloning the repo edit the `tempfile.sh` script and replace the variable value of `DIR={your-temp-dir}` to your temp directory liking. 
 1. Clone the repository to your linux-machine.
 2. Schedule the jobs using `systemd`(refer the above section on how to create a schedule) or cron.
 
