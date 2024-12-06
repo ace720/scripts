@@ -6,12 +6,8 @@ set -eu -o pipefail
 export DIR=$HOME/Downloads/temp/
 
 function cleanDir() {
-#check for empty directory
-  if [[ -d $DIR ]]; then
-    rm -rf $DIR*
-  else
-    echo "$DIR does not exist!"
-  fi
+  #check for empty directory
+  [[ -d $DIR ]] && rm -rf $DIR* || echo "$DIR does not exists!"
 }
 
 cleanDir
