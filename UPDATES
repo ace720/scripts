@@ -1,143 +1,131 @@
-:: Starting full system upgrade...
-resolving dependencies...
-looking for conflicting packages...
-
-Package (127)                     Old Version          New Version           Net Change  Download Size
-
-extra/alsa-card-profiles          1:1.2.6-1            1:1.2.7-1               0.00 MiB       0.03 MiB
-extra/alsa-ucm-conf               1.2.13-1             1.2.13-2                0.00 MiB       0.09 MiB
-core/archlinux-keyring            20241015-1           20241203-1              0.00 MiB       1.18 MiB
-extra/bluedevil                   1:6.2.3-1            1:6.2.4-1               0.00 MiB       0.54 MiB
-extra/breeze                      6.2.3-1              6.2.4-1                 0.00 MiB      84.32 MiB
-core/btrfs-progs                  6.11-1               6.12-1                  0.02 MiB       1.20 MiB
-extra/dav1d                       1.4.3-1              1.5.0-1                -0.02 MiB       0.61 MiB
-extra/fastfetch                   2.30.1-1             2.31.0-1                0.02 MiB       0.58 MiB
-extra/ffmpeg                      2:7.1-2              2:7.1-3                 0.00 MiB      12.18 MiB
-core/file                         5.45-1               5.46-2                  1.76 MiB       0.42 MiB
-extra/firefox                     132.0.2-1            133.0-1                 2.52 MiB      71.47 MiB
-extra/flashrom                    1.4.0-1              1.5.0-1                 3.95 MiB       4.46 MiB
-extra/foliate                     3.1.1-1              3.2.0-1                 8.44 MiB       3.05 MiB
-extra/fwupd                       2.0.1-2              2.0.3-1                 0.49 MiB       6.24 MiB
-extra/glslang                     14.3.0-1             15.0.0-2               -2.85 MiB       2.21 MiB
-core/gnupg                        2.4.6-1              2.4.7-1                 0.00 MiB       2.77 MiB
-core/gpgme                        1.24.0-1             1.24.1-1                0.00 MiB       0.45 MiB
-extra/gst-plugins-bad-libs        1.24.9-3             1.24.10-1               0.00 MiB       2.65 MiB
-extra/gst-plugins-base            1.24.9-3             1.24.10-1               0.00 MiB       0.30 MiB
-extra/gst-plugins-base-libs       1.24.9-3             1.24.10-1               0.01 MiB       2.20 MiB
-extra/gstreamer                   1.24.9-3             1.24.10-1               0.00 MiB       1.98 MiB
-core/hwdata                       0.389-1              0.390-1                 0.04 MiB       1.61 MiB
-extra/js128                       128.4.0-1            128.5.0-1               0.04 MiB      14.19 MiB
-extra/kactivitymanagerd           6.2.3-1              6.2.4-1                 0.00 MiB       0.21 MiB
-extra/kde-cli-tools               6.2.3-1              6.2.4-1                 0.00 MiB       0.87 MiB
-extra/kde-gtk-config              6.2.3-1              6.2.4-1                 0.00 MiB       0.08 MiB
-extra/kdecoration                 6.2.3-1              6.2.4-1                 0.00 MiB       0.08 MiB
-extra/kdeplasma-addons            6.2.3-1              6.2.4-1                 0.00 MiB       1.17 MiB
-extra/kglobalacceld               6.2.3-1              6.2.4-1                 0.00 MiB       0.10 MiB
-extra/kinfocenter                 6.2.3-1              6.2.4-1                 0.00 MiB       0.85 MiB
-extra/kirigami-addons             1.5.0-1              1.6.0-1                 0.11 MiB       0.95 MiB
-extra/kmenuedit                   6.2.3-1              6.2.4-1                 0.00 MiB       1.00 MiB
-extra/kpipewire                   6.2.3-2              6.2.4-1                 0.00 MiB       0.13 MiB
-extra/kscreen                     6.2.3-1              6.2.4-1                 0.00 MiB       0.30 MiB
-extra/kscreenlocker               6.2.3-1              6.2.4-1                 0.00 MiB       0.24 MiB
-extra/ksystemstats                6.2.3-1              6.2.4-1                 0.00 MiB       0.26 MiB
-extra/kwayland                    6.2.3-1              6.2.4-1                 0.00 MiB       1.22 MiB
-extra/kwayland-integration        6.2.3-1              6.2.4-1                 0.00 MiB       0.04 MiB
-extra/kwin                        6.2.3-1              6.2.4-2                -0.01 MiB      10.11 MiB
-extra/layer-shell-qt              6.2.3-1              6.2.4-2                 0.00 MiB       0.03 MiB
-core/less                         1:661-1              1:668-1                 0.00 MiB       0.14 MiB
-core/libbpf                       1.4.3-1              1.5.0-1                 0.02 MiB       0.26 MiB
-extra/libcdr                      0.1.7-8              0.1.8-1                 0.12 MiB       0.95 MiB
-extra/libdrm                      2.4.123-1            2.4.124-1               0.00 MiB       0.33 MiB
-extra/libetonyek                  0.1.11-1             0.1.12-1                0.00 MiB       1.47 MiB
-extra/libjxl                      0.11.0-2             0.11.1-1                0.00 MiB       1.99 MiB
-extra/libkscreen                  6.2.3-1              6.2.4-1                 0.00 MiB       0.42 MiB
-extra/libksysguard                6.2.3-1              6.2.4-1                 0.02 MiB       0.61 MiB
-core/libldap                      2.6.8-2              2.6.9-1                 0.00 MiB       0.27 MiB
-extra/libpipewire                 1:1.2.6-1            1:1.2.7-1               0.00 MiB       0.39 MiB
-extra/libplacebo                  7.349.0-2            7.349.0-3               0.00 MiB       0.48 MiB
-extra/libplasma                   6.2.3-1              6.2.4-1                 0.00 MiB       2.77 MiB
-extra/libqalculate                5.4.0-1              5.4.0.1-1               0.00 MiB       2.82 MiB
-extra/libsysprof-capture          47.1-1               47.2-1                  0.00 MiB       0.05 MiB
-core/libtool                      2.5.3-1              2.5.4+r1+gbaa1fe41-1    0.03 MiB       0.41 MiB
-extra/libwacom                    2.13.0-1             2.14.0-1                0.06 MiB       0.15 MiB
-extra/libzip                      1.11.1-1             1.11.2-1                0.00 MiB       0.24 MiB
-core/linux                        6.11.8.arch1-2       6.12.1.arch1-1          0.51 MiB     136.55 MiB
-extra/lua-language-server         3.13.2-1             3.13.3-1                0.00 MiB       2.86 MiB
-extra/mesa                        1:24.2.7-1           1:24.3.1-1            -14.70 MiB      18.91 MiB
-extra/milou                       6.2.3-1              6.2.4-1                 0.00 MiB       0.08 MiB
-extra/node-gyp                    10.2.0-1             11.0.0-1                1.50 MiB       1.28 MiB
-extra/nodejs                      23.1.0-1             23.3.0-1                0.05 MiB      15.46 MiB
-extra/noto-fonts                  1:2024.11.01-1       1:2024.12.01-1          0.00 MiB      27.84 MiB
-extra/npm                         10.9.0-1             10.9.2-1               -0.30 MiB       1.53 MiB
-core/npth                         1.7-1                1.8-1                   0.01 MiB       0.03 MiB
-extra/ocean-sound-theme           6.2.3-1              6.2.4-1                 0.00 MiB       1.90 MiB
-extra/openal                      1.24.0-1             1.24.1-1                0.11 MiB       0.80 MiB
-extra/opencv                      4.10.0-14            4.10.0-15               0.00 MiB      27.03 MiB
-core/pacman                       7.0.0.r3.g7736133-1  7.0.0.r6.gc685ae6-1     0.00 MiB       0.92 MiB
-extra/pipewire                    1:1.2.6-1            1:1.2.7-1               0.00 MiB       0.60 MiB
-extra/pipewire-audio              1:1.2.6-1            1:1.2.7-1               0.00 MiB       1.14 MiB
-extra/pipewire-jack               1:1.2.6-1            1:1.2.7-1               0.00 MiB       0.15 MiB
-extra/pixman                      0.44.0-1             0.44.2-1                0.00 MiB       0.26 MiB
-core/pkgconf                      2.1.1-1              2.3.0-1                 0.00 MiB       0.06 MiB
-extra/plasma-activities           6.2.3-1              6.2.4-1                 0.00 MiB       0.29 MiB
-extra/plasma-activities-stats     6.2.3-1              6.2.4-1                 0.00 MiB       0.28 MiB
-extra/plasma-browser-integration  6.2.3-1              6.2.4-1                 0.00 MiB       0.15 MiB
-extra/plasma-desktop              6.2.3-1              6.2.4-1                 0.03 MiB      16.41 MiB
-extra/plasma-firewall             6.2.3-1              6.2.4-1                 0.00 MiB       0.48 MiB
-extra/plasma-integration          6.2.3-1              6.2.4-1                 0.00 MiB       0.15 MiB
-extra/plasma-nm                   6.2.3-1              6.2.4-1                 0.00 MiB       1.55 MiB
-extra/plasma-pa                   6.2.3-1              6.2.4-1                 0.01 MiB       0.31 MiB
-extra/plasma-thunderbolt          6.2.3-1              6.2.4-1                 0.00 MiB       0.13 MiB
-extra/plasma-workspace            6.2.3-1              6.2.4-1                 0.02 MiB      19.86 MiB
-extra/plasma5support              6.2.3-1              6.2.4-1                 0.00 MiB       0.54 MiB
-extra/polkit-kde-agent            6.2.3-1              6.2.4-1                 0.00 MiB       0.07 MiB
-extra/powerdevil                  6.2.3-1              6.2.4-1                 0.02 MiB       1.29 MiB
-extra/python-tqdm                 4.67.0-1             4.67.1-1                0.00 MiB       0.12 MiB
-extra/qqc2-breeze-style           6.2.3-1              6.2.4-1                 0.00 MiB       0.37 MiB
-extra/qt6-5compat                 6.8.0-1              6.8.1-1                 0.04 MiB       0.44 MiB
-extra/qt6-base                    6.8.0-1              6.8.1-1                 0.87 MiB      14.17 MiB
-extra/qt6-declarative             6.8.0-6              6.8.1-1                 0.77 MiB      15.03 MiB
-extra/qt6-imageformats            6.8.0-1              6.8.1-1                 0.02 MiB       0.06 MiB
-extra/qt6-multimedia              6.8.0-2              6.8.1-1                 0.35 MiB       1.02 MiB
-extra/qt6-multimedia-ffmpeg       6.8.0-2              6.8.1-1                 0.07 MiB       0.22 MiB
-extra/qt6-positioning             6.8.0-1              6.8.1-1                 0.04 MiB       0.36 MiB
-extra/qt6-quick3d                 6.8.0-1              6.8.1-1                 0.15 MiB       5.15 MiB
-extra/qt6-quicktimeline           6.8.0-1              6.8.1-1                 0.02 MiB       0.07 MiB
-extra/qt6-sensors                 6.8.0-1              6.8.1-1                 0.04 MiB       0.18 MiB
-extra/qt6-shadertools             6.8.0-1              6.8.1-1                 0.03 MiB       1.52 MiB
-extra/qt6-speech                  6.8.0-1              6.8.1-1                 0.02 MiB       0.12 MiB
-extra/qt6-svg                     6.8.0-1              6.8.1-1                 0.04 MiB       0.24 MiB
-extra/qt6-tools                   6.8.0-1              6.8.1-1                 0.22 MiB       5.92 MiB
-extra/qt6-translations            6.8.0-1              6.8.1-1                 0.00 MiB       1.78 MiB
-extra/qt6-virtualkeyboard         6.8.0-1              6.8.1-1                 0.11 MiB       2.41 MiB
-extra/qt6-wayland                 6.8.0-2              6.8.1-1                 0.32 MiB       1.18 MiB
-extra/qt6-webchannel              6.8.0-1              6.8.1-1                 0.01 MiB       0.13 MiB
-extra/qt6-webengine               6.8.0-8              6.8.1-1                -0.51 MiB      80.11 MiB
-extra/qt6-websockets              6.8.0-1              6.8.1-1                 0.01 MiB       0.10 MiB
-extra/sddm-kcm                    6.2.3-1              6.2.4-1                 0.00 MiB       0.14 MiB
-extra/shaderc                     2024.2-1             2024.3-2                0.00 MiB       0.16 MiB
-extra/sof-firmware                2024.09.1-1          2024.09.2-1             0.00 MiB       1.38 MiB
-extra/spirv-tools                 2024.2-1             2024.4.rc1-1            0.08 MiB       1.61 MiB
-core/sqlite                       3.46.1-1             3.47.1-2                1.55 MiB       1.94 MiB
-core/sudo                         1.9.16.p1-1          1.9.16.p2-1             0.00 MiB       1.88 MiB
-core/systemd                      256.8-1              256.9-1                 0.05 MiB       8.50 MiB
-core/systemd-libs                 256.8-1              256.9-1                 0.00 MiB       1.10 MiB
-core/systemd-sysvcompat           256.8-1              256.9-1                 0.00 MiB       0.01 MiB
-extra/systemsettings              6.2.3-1              6.2.4-1                 0.00 MiB       0.34 MiB
-extra/vulkan-headers              1:1.3.295-1          1:1.4.303-1             1.85 MiB       1.28 MiB
-extra/vulkan-icd-loader           1.3.295-1            1.4.303-1               0.02 MiB       0.14 MiB
-extra/vulkan-tools                1.3.269-1            1.4.303-1               0.24 MiB       0.31 MiB
-extra/webkitgtk-6.0               2.46.3-1             2.46.4-1                0.19 MiB      29.21 MiB
-extra/xdg-desktop-portal-kde      6.2.3-1              6.2.4-1                 0.00 MiB       0.40 MiB
-extra/xorg-xkbevd                 1.1.5-2              1.1.6-1                 0.00 MiB       0.02 MiB
-extra/zlib-ng                     2.2.2-2              2.2.2-3                 0.00 MiB       0.10 MiB
-
-Total Download Size:    704.29 MiB
-Total Installed Size:  2129.41 MiB
-Net Upgrade Size:         8.69 MiB
-
-:: Retrieving packages...
- linux-6.12.1.arch1-1-x86_64 downloading...
- breeze-6.2.4-1-x86_64 downloading...
- qt6-webengine-6.8.1-1-x86_64 downloading...
-Errors occurred, no packages were upgraded.
+alsa-card-profiles-1:1.2.7-1-x86_64.pkg.tar.zst
+alsa-ucm-conf-1.2.13-2-any.pkg.tar.zst
+libldap-2.6.9-1-x86_64.pkg.tar.zst
+sqlite-3.47.1-2-x86_64.pkg.tar.zst
+npth-1.8-1-x86_64.pkg.tar.zst
+systemd-libs-256.9-1-x86_64.pkg.tar.zst
+libsysprof-capture-47.2-1-x86_64.pkg.tar.zst
+gnupg-2.4.7-1-x86_64.pkg.tar.zst
+gpgme-1.24.1-1-x86_64.pkg.tar.zst
+hwdata-0.390-1-any.pkg.tar.zst
+file-5.46-2-x86_64.pkg.tar.zst
+systemd-256.9-1-x86_64.pkg.tar.zst
+pacman-7.0.0.r6.gc685ae6-1-x86_64.pkg.tar.zst
+archlinux-keyring-20241203-1-any.pkg.tar.zst
+libdrm-2.4.124-1-x86_64.pkg.tar.zst
+spirv-tools-2024.4.rc1-1-x86_64.pkg.tar.zst
+mesa-1:24.3.1-2-x86_64.pkg.tar.zst
+vulkan-headers-1:1.4.303-1-any.pkg.tar.zst
+qt6-translations-6.8.1-1-any.pkg.tar.zst
+libwacom-2.14.0-1-x86_64.pkg.tar.zst
+qt6-base-6.8.1-1-x86_64.pkg.tar.zst
+qt6-declarative-6.8.1-1-x86_64.pkg.tar.zst
+plasma-activities-6.2.4-1-x86_64.pkg.tar.zst
+qt6-shadertools-6.8.1-1-x86_64.pkg.tar.zst
+qt6-5compat-6.8.1-1-x86_64.pkg.tar.zst
+qt6-svg-6.8.1-1-x86_64.pkg.tar.zst
+qt6-wayland-6.8.1-1-x86_64.pkg.tar.zst
+libpulse-17.0+r43+g3e2bb8a1e-1-x86_64.pkg.tar.zst
+libtool-2.5.4+r1+gbaa1fe41-1-x86_64.pkg.tar.zst
+libplasma-6.2.4-1-x86_64.pkg.tar.zst
+bluedevil-1:6.2.4-1-x86_64.pkg.tar.zst
+kdecoration-6.2.4-1-x86_64.pkg.tar.zst
+breeze-6.2.4-1-x86_64.pkg.tar.zst
+btrfs-progs-6.12-1-x86_64.pkg.tar.zst
+dav1d-1.5.0-1-x86_64.pkg.tar.zst
+fastfetch-2.31.0-1-x86_64.pkg.tar.zst
+glslang-15.0.0-2-x86_64.pkg.tar.zst
+libpipewire-1:1.2.7-1-x86_64.pkg.tar.zst
+pipewire-1:1.2.7-1-x86_64.pkg.tar.zst
+pipewire-audio-1:1.2.7-1-x86_64.pkg.tar.zst
+pipewire-jack-1:1.2.7-1-x86_64.pkg.tar.zst
+libjxl-0.11.1-1-x86_64.pkg.tar.zst
+vulkan-icd-loader-1.4.303-1-x86_64.pkg.tar.zst
+shaderc-2024.3-2-x86_64.pkg.tar.zst
+libplacebo-7.349.0-3-x86_64.pkg.tar.zst
+sdl2-2.30.10-1-x86_64.pkg.tar.zst
+pixman-0.44.2-1-x86_64.pkg.tar.zst
+ffmpeg-2:7.1-3-x86_64.pkg.tar.zst
+noto-fonts-1:2024.12.01-1-any.pkg.tar.zst
+firefox-133.0-1-x86_64.pkg.tar.zst
+flashrom-1.5.0-1-x86_64.pkg.tar.zst
+gstreamer-1.24.10-1-x86_64.pkg.tar.zst
+gst-plugins-base-libs-1.24.10-1-x86_64.pkg.tar.zst
+gst-plugins-bad-libs-1.24.10-1-x86_64.pkg.tar.zst
+webkitgtk-6.0-2.46.4-1-x86_64.pkg.tar.zst
+js128-128.5.0-1-x86_64.pkg.tar.zst
+foliate-3.2.0-1-any.pkg.tar.zst
+fwupd-2.0.3-1-x86_64.pkg.tar.zst
+gst-plugins-base-1.24.10-1-x86_64.pkg.tar.zst
+kactivitymanagerd-6.2.4-1-x86_64.pkg.tar.zst
+kde-cli-tools-6.2.4-1-x86_64.pkg.tar.zst
+kde-gtk-config-6.2.4-1-x86_64.pkg.tar.zst
+qt6-multimedia-ffmpeg-6.8.1-1-x86_64.pkg.tar.zst
+qt6-multimedia-6.8.1-1-x86_64.pkg.tar.zst
+kirigami-addons-1.6.0-1-x86_64.pkg.tar.zst
+kglobalacceld-6.2.4-1-x86_64.pkg.tar.zst
+layer-shell-qt-6.2.4-2-x86_64.pkg.tar.zst
+libkscreen-6.2.4-1-x86_64.pkg.tar.zst
+kscreenlocker-6.2.4-1-x86_64.pkg.tar.zst
+kwayland-6.2.4-1-x86_64.pkg.tar.zst
+qt6-sensors-6.8.1-1-x86_64.pkg.tar.zst
+qt6-tools-6.8.1-1-x86_64.pkg.tar.zst
+kwin-6.2.4-2-x86_64.pkg.tar.zst
+kpipewire-6.2.4-1-x86_64.pkg.tar.zst
+libksysguard-6.2.4-1-x86_64.pkg.tar.zst
+ksystemstats-6.2.4-1-x86_64.pkg.tar.zst
+libqalculate-5.4.0.1-1-x86_64.pkg.tar.zst
+milou-6.2.4-1-x86_64.pkg.tar.zst
+ocean-sound-theme-6.2.4-1-any.pkg.tar.zst
+plasma-activities-stats-6.2.4-1-x86_64.pkg.tar.zst
+plasma5support-6.2.4-1-x86_64.pkg.tar.zst
+qt6-positioning-6.8.1-1-x86_64.pkg.tar.zst
+qt6-virtualkeyboard-6.8.1-1-x86_64.pkg.tar.zst
+qqc2-breeze-style-6.2.4-1-x86_64.pkg.tar.zst
+xdg-desktop-portal-kde-6.2.4-1-x86_64.pkg.tar.zst
+plasma-integration-6.2.4-1-x86_64.pkg.tar.zst
+qt6-speech-6.8.1-1-x86_64.pkg.tar.zst
+plasma-workspace-6.2.4-1-x86_64.pkg.tar.zst
+qt6-quicktimeline-6.8.1-1-x86_64.pkg.tar.zst
+qt6-quick3d-6.8.1-1-x86_64.pkg.tar.zst
+kdeplasma-addons-6.2.4-1-x86_64.pkg.tar.zst
+systemsettings-6.2.4-1-x86_64.pkg.tar.zst
+vulkan-tools-1.4.303-1-x86_64.pkg.tar.zst
+libbpf-1.5.0-1-x86_64.pkg.tar.zst
+kinfocenter-6.2.4-1-x86_64.pkg.tar.zst
+kmenuedit-6.2.4-1-x86_64.pkg.tar.zst
+kscreen-6.2.4-1-x86_64.pkg.tar.zst
+kwayland-integration-6.2.4-1-x86_64.pkg.tar.zst
+less-1:668-1-x86_64.pkg.tar.zst
+libcdr-0.1.8-1-x86_64.pkg.tar.zst
+libetonyek-0.1.12-1-x86_64.pkg.tar.zst
+libzip-1.11.2-1-x86_64.pkg.tar.zst
+linux-6.12.3.arch1-1-x86_64.pkg.tar.zst
+lua-language-server-3.13.3-1-x86_64.pkg.tar.zst
+nodejs-23.3.0-1-x86_64.pkg.tar.zst
+node-gyp-11.0.0-1-any.pkg.tar.zst
+npm-10.9.2-1-any.pkg.tar.zst
+openal-1.24.1-1-x86_64.pkg.tar.zst
+opencv-4.10.0-15-x86_64.pkg.tar.zst
+pkgconf-2.3.0-1-x86_64.pkg.tar.zst
+qt6-webchannel-6.8.1-1-x86_64.pkg.tar.zst
+qt6-webengine-6.8.1-1-x86_64.pkg.tar.zst
+plasma-browser-integration-6.2.4-1-x86_64.pkg.tar.zst
+polkit-kde-agent-6.2.4-1-x86_64.pkg.tar.zst
+qt6-websockets-6.8.1-1-x86_64.pkg.tar.zst
+powerdevil-6.2.4-1-x86_64.pkg.tar.zst
+plasma-desktop-6.2.4-1-x86_64.pkg.tar.zst
+plasma-firewall-6.2.4-1-x86_64.pkg.tar.zst
+plasma-nm-6.2.4-1-x86_64.pkg.tar.zst
+pulseaudio-17.0+r43+g3e2bb8a1e-1-x86_64.pkg.tar.zst
+plasma-pa-6.2.4-1-x86_64.pkg.tar.zst
+plasma-thunderbolt-6.2.4-1-x86_64.pkg.tar.zst
+pulseaudio-bluetooth-17.0+r43+g3e2bb8a1e-1-x86_64.pkg.tar.zst
+python-tqdm-4.67.1-1-any.pkg.tar.zst
+qt6-imageformats-6.8.1-1-x86_64.pkg.tar.zst
+sddm-kcm-6.2.4-1-x86_64.pkg.tar.zst
+sof-firmware-2024.09.2-1-x86_64.pkg.tar.zst
+sudo-1.9.16.p2-1-x86_64.pkg.tar.zst
+systemd-sysvcompat-256.9-1-x86_64.pkg.tar.zst
+xorg-xkbevd-1.1.6-1-x86_64.pkg.tar.zst
+zlib-ng-2.2.2-3-x86_64.pkg.tar.zst

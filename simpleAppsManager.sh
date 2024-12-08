@@ -1,14 +1,17 @@
 #!/bin/bash
 
-pacman -Su >UPDATES
+UPDATES="$(pacman -Su --print-format %n%v)"
+
+TotalUpdates="$(echo "$UPDATES" | wc -l)"
 
 function showUpdate {
-  echo "Available updates: $UPDATES"
+  echo "Available updates: $TotalUpdates"
+  echo "$UPDATES" | less
 }
 
-function whoseon {
+function ignorePackage {
   clear
-  who
+
 }
 
 function memUsage {
@@ -17,13 +20,14 @@ function memUsage {
 }
 
 PS3="Enter option: "
-select option in "Display disk space" "Display logged on users" "Display memory usage" "Exit program"; do
+select option in "Show Updates" "Display logged on users" "Display memory usage" "Exit program"; do
   case $option in
   "Exit program")
     break
     ;;
-  "Display disk space")
-    checkUpdate
+  "Show Updates")
+    clear
+    showUpdate
     ;;
   "Display logged on users")
     whoseon
