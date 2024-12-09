@@ -20,8 +20,14 @@ function clearCache {
   pacman -Scc
 }
 
+function removePackage {
+  clear
+  read -r -p "Enter package name to Uninstall: " packageName
+  pacman -R $packageName
+}
+
 PS3="Enter option: "
-select option in "Show Updates" "Clear pacman's cache" "Install a package" "Exit program"; do
+select option in "Show Updates" "Clear pacman's cache" "Install a package" "Uninstall a package" "Exit program"; do
   case $option in
   "Exit program")
     break
@@ -36,6 +42,9 @@ select option in "Show Updates" "Clear pacman's cache" "Install a package" "Exit
     ;;
   "Install a package")
     installPackage
+    ;;
+  "Uninstall a package")
+    removePackage
     ;;
   *)
     clear
