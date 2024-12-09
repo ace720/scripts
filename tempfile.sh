@@ -7,7 +7,16 @@ export DIR=$HOME/Downloads/temp/
 
 function cleanDir() {
   #check for empty directory
-  [[ -d $DIR ]] && rm -rf $DIR* || echo "$DIR does not exists!"
+  if [[ -d "$DIR" ]] then
+	  if [[ "$(ls -A $DIR)" ]] then
+		  rm -rf $DIR*
+		  echo "Deleted $(ls -l | wc -l) contents successfully"
+	  else
+		  echo "$DIR is empty"
+	  fi
+   else
+	   echo "$DIR does not exists!"
+   fi
 }
 
 cleanDir
