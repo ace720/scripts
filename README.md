@@ -19,6 +19,7 @@ In this repo, one can find various helpful scripts written in bash for automatin
        Description="Service description goes here"
 
        [Service]
+       Environment="HOME=/path/to/your/homeDir"
        ExecStart=/path/to/your/script
        ```
     2. Then create another file `/etc/systemd/system/serviceName.timer` with the following content:
