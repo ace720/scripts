@@ -2,7 +2,7 @@
 
 set -eu -o pipefail
 
-# Variables
+# Variable
 export DIR=$HOME/Downloads/temp/
 
 function cleanDir() {
