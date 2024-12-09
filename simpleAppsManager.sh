@@ -9,18 +9,19 @@ function showUpdate {
   echo "$UPDATES" | less
 }
 
-function ignorePackage {
+function installPackage {
   clear
-
+  read -r -p "Enter package name: " packageName
+  pacman -S $packageName
 }
 
-function memUsage {
+function clearCache {
   clear
-  cat /proc/meminfo
+  pacman -Scc
 }
 
 PS3="Enter option: "
-select option in "Show Updates" "Display logged on users" "Display memory usage" "Exit program"; do
+select option in "Show Updates" "Clear pacman's cache" "Install a package" "Exit program"; do
   case $option in
   "Exit program")
     break
@@ -29,11 +30,12 @@ select option in "Show Updates" "Display logged on users" "Display memory usage"
     clear
     showUpdate
     ;;
-  "Display logged on users")
-    whoseon
+  "Clear pacman's cache")
+    clear
+    clearCache
     ;;
-  "Display memory usage")
-    memUsage
+  "Install a package")
+    installPackage
     ;;
   *)
     clear
