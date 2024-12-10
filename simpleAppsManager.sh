@@ -23,14 +23,26 @@ function clearCache {
 function removePackage {
   clear
   read -r -p "Enter package name to Uninstall: " packageName
-  pacman -R $packageName
+  clear
+  read -r -p "Do you want to uninstall with its dependency? [(Y)es or (N)o]: " varBool
+  [[ "$varBool" == "Y" ]] && pacman -Rns $packageName || pacman -R $packageName
+}
+
+function retrieveInfo {
+  clear
+  read -r -p "Enter package name to retreive its information: " packageName
+  pacman -Qi $packageName | sed '/Architecture/,+4d;/Required By/,+3d;/Install Reason/,+1d'
 }
 
 PS3="Enter option: "
-select option in "Show Updates" "Clear pacman's cache" "Install a package" "Uninstall a package" "Exit program"; do
+select option in "Show Updates" "Query package information" "Clear pacman's cache" "Install a package" "Uninstall a package" "Exit program"; do
   case $option in
   "Exit program")
     break
+    ;;
+  "Query package information")
+    clear
+    retrieveInfo
     ;;
   "Show Updates")
     clear
