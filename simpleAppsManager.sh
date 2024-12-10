@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu -o pipefail
+
 UPDATES="$(pacman -Su --print-format %n%v)"
 
 TotalUpdates="$(echo "$UPDATES" | wc -l)"
@@ -20,6 +22,12 @@ function clearCache {
   pacman -Scc
 }
 
+function packageSize {
+  clear
+  read -r -p "Enter package name to determine its size (or press ENTER to show all installed packages size): " packageName
+  LC_ALL=C.UTF-8 pacman -Qi $packageName | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | LC_ALL=C.UTF-8 sort -h
+}
+
 function removePackage {
   clear
   read -r -p "Enter package name to Uninstall: " packageName
@@ -35,7 +43,7 @@ function retrieveInfo {
 }
 
 PS3="Enter option: "
-select option in "Show Updates" "Query package information" "Clear pacman's cache" "Install a package" "Uninstall a package" "Exit program"; do
+select option in "Show Updates" "Show package installed size" "Query package information" "Clear pacman's cache" "Install a package" "Uninstall a package" "Exit program"; do
   case $option in
   "Exit program")
     break
@@ -43,6 +51,10 @@ select option in "Show Updates" "Query package information" "Clear pacman's cach
   "Query package information")
     clear
     retrieveInfo
+    ;;
+  "Show package installed size")
+    clear
+    packageSize
     ;;
   "Show Updates")
     clear
