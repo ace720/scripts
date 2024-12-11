@@ -7,7 +7,7 @@ export DIR=$HOME/Downloads/temp/
 TotalContent=$(ls -l $DIR | wc -l)
 
 function cleanDir() {
-  #check for empty directory
+  #check directory
   if [[ -d "$DIR" ]]; then
     if [[ "$(ls -A $DIR)" ]]; then
       rm -rf $DIR*

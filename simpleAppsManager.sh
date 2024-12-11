@@ -2,7 +2,10 @@
 
 set -eu -o pipefail
 
+#Global variables
 UPDATES="$(pacman -Su --print-format %n%v)"
+
+packageStoreDir=/var/cache/pacman/pkg/
 
 TotalUpdates="$(echo "$UPDATES" | wc -l)"
 
@@ -20,6 +23,10 @@ function installPackage {
 function clearCache {
   clear
   pacman -Scc
+}
+
+function packageCacheSize {
+  du -h $packageStoreDir
 }
 
 function packageSize {
@@ -42,38 +49,69 @@ function retrieveInfo {
   pacman -Qi $packageName | sed '/Architecture/,+4d;/Required By/,+3d;/Install Reason/,+1d'
 }
 
-PS3="Enter option: "
-select option in "Show Updates" "Show package installed size" "Query package information" "Clear pacman's cache" "Install a package" "Uninstall a package" "Exit program"; do
-  case $option in
-  "Exit program")
-    break
-    ;;
-  "Query package information")
-    clear
-    retrieveInfo
-    ;;
-  "Show package installed size")
-    clear
-    packageSize
-    ;;
-  "Show Updates")
-    clear
-    showUpdate
-    ;;
-  "Clear pacman's cache")
-    clear
-    clearCache
-    ;;
-  "Install a package")
-    installPackage
-    ;;
-  "Uninstall a package")
-    removePackage
-    ;;
-  *)
-    clear
-    echo "Sorry, wrong selection"
-    ;;
-  esac
-done
-clear
+function manageCache {
+  PS3="Choose one option: "
+  select option in "Clear pacman's cache" "Show pacman cache size" "Return to previous menu" "Exit program"; do
+    case $option in
+    "Exit program")
+      exit 0
+      ;;
+    "Show pacman cache size")
+      clear
+      packageCacheSize
+      ;;
+    "Clear pacman's cache")
+      clearCache
+      ;;
+    "Return to previous menu")
+      clear
+      main
+      ;;
+    *)
+      clear
+      echo "Sorry!, Wrong selection"
+      ;;
+    esac
+  done
+}
+
+function main {
+  clear
+  PS3="Enter option: "
+  select option in "Show Updates" "Show package installed size" "Query package information" "Manage pacman cache" "Install a package" "Uninstall a package" "Exit program"; do
+    case $option in
+    "Exit program")
+      exit 0
+      ;;
+    "Query package information")
+      clear
+      retrieveInfo
+      ;;
+    "Show package installed size")
+      clear
+      packageSize
+      ;;
+    "Show Updates")
+      clear
+      showUpdate
+      ;;
+    "Manage pacman cache")
+      clear
+      manageCache
+      ;;
+    "Install a package")
+      installPackage
+      ;;
+    "Uninstall a package")
+      removePackage
+      ;;
+    *)
+      clear
+      echo "Sorry, wrong selection"
+      ;;
+    esac
+  done
+  clear
+}
+
+main
