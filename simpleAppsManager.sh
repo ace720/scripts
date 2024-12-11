@@ -75,10 +75,45 @@ function manageCache {
   done
 }
 
+function installNmanage {
+  PS3="Select one option: "
+  select option in "Show Updates" "Install a package" "Uninstall a package" "Return to previous menu" "Exit program"; do
+    case $option in
+    "Exit program")
+      exit 0
+      ;;
+    "Show Updates")
+      clear
+      showUpdate
+      ;;
+    "Install a package")
+      clear
+      installPackage
+      ;;
+    "Uninstall a package")
+      clear
+      removePackage
+      ;;
+    "Return to previous menu")
+      clear
+      main
+      ;;
+    "Exit program")
+      clear
+      exit 0
+      ;;
+    *)
+      clear
+      echo "Sorry!, Wrong selection"
+      ;;
+    esac
+  done
+}
+
 function main {
   clear
   PS3="Enter option: "
-  select option in "Show Updates" "Show package installed size" "Query package information" "Manage pacman cache" "Install a package" "Uninstall a package" "Exit program"; do
+  select option in "Install & Manage" "Show package installed size" "Query package information" "Manage pacman cache" "Exit program"; do
     case $option in
     "Exit program")
       exit 0
@@ -91,19 +126,13 @@ function main {
       clear
       packageSize
       ;;
-    "Show Updates")
+    "Install & Manage")
       clear
-      showUpdate
+      installNmanage
       ;;
     "Manage pacman cache")
       clear
       manageCache
-      ;;
-    "Install a package")
-      installPackage
-      ;;
-    "Uninstall a package")
-      removePackage
       ;;
     *)
       clear
