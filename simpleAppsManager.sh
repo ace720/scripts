@@ -47,7 +47,7 @@ function clearCache {
 }
 
 function packageCacheSize {
-  du -h $packageStoreDir | awk '{print $1}'
+  du -hc $packageStoreDir | awk '{if($2=="total"){print $1}}'
 }
 
 function packageSize {
