@@ -9,6 +9,19 @@ packageStoreDir=/var/cache/pacman/pkg/
 
 TotalUpdates="$(echo "$UPDATES" | wc -l)"
 
+function appSummary {
+  echo "================================================="
+  echo "PACKAGES SUMMARY"
+  echo "================================================="
+  echo " "
+  echo "Total Packages: "
+  echo "Total Updates: $TotalUpdates"
+  echo "Total installed packages size: "
+  echo "Total cached size: $(packageCacheSize)"
+  echo "================================================="
+  echo " "
+}
+
 function showUpdate {
   echo "Available updates: $TotalUpdates"
   echo "$UPDATES" | less
@@ -26,7 +39,7 @@ function clearCache {
 }
 
 function packageCacheSize {
-  du -h $packageStoreDir
+  du -h $packageStoreDir | awk '{print $1}'
 }
 
 function packageSize {
@@ -80,6 +93,7 @@ function installNmanage {
   select option in "Show Updates" "Install a package" "Uninstall a package" "Return to previous menu" "Exit program"; do
     case $option in
     "Exit program")
+      clear
       exit 0
       ;;
     "Show Updates")
@@ -112,10 +126,12 @@ function installNmanage {
 
 function main {
   clear
+  appSummary
   PS3="Enter option: "
   select option in "Install & Manage" "Show package installed size" "Query package information" "Manage pacman cache" "Exit program"; do
     case $option in
     "Exit program")
+      clear
       exit 0
       ;;
     "Query package information")
