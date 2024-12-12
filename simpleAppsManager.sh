@@ -2,8 +2,10 @@
 
 set -eu -o pipefail
 
+echo "Updating databases"
+
 #Global variables
-UPDATES="$(pacman -Su --print-format %n%v)"
+UPDATES="$(pacman -Syu --print-format %n%v)"
 
 packageStoreDir=/var/cache/pacman/pkg/
 
@@ -21,6 +23,11 @@ function appSummary {
   echo "================================================="
   echo " "
 }
+
+function totalUpdates {
+  pacman -Syu --print-format %r/ | awk '{if($1=="core/"){total+=1} else if($1=="extra/"){total+=1}}END{print total}'
+}
+TotalUpdates="$(totalUpdates)"
 
 function showUpdate {
   echo "Available updates: $TotalUpdates"
