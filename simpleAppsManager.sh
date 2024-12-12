@@ -11,13 +11,13 @@ TotalUpdates="$(echo "$UPDATES" | wc -l)"
 
 function appSummary {
   echo "================================================="
-  echo "PACKAGES SUMMARY"
+  echo "SYSTEM & PACKAGES SUMMARY"
   echo "================================================="
-  echo " "
-  echo "Total Packages: "
-  echo "Total Updates: $TotalUpdates"
-  echo "Total installed packages size: "
-  echo "Total cached size: $(packageCacheSize)"
+  echo -e "System Architecture: \033[1m$(showArchitecture)\033[0m"
+  echo -e "Total Packages: \033[1m$(totalPackages) packages\033[0m"
+  echo -e "Total Updates: \033[1m$TotalUpdates packages\033[0m"
+  echo -e "Total installed packages size: \033[1m$(totalInstalledSize)\033[0m"
+  echo -e "Total cached size: \033[1m$(packageCacheSize)\033[0m"
   echo "================================================="
   echo " "
 }
@@ -25,6 +25,14 @@ function appSummary {
 function showUpdate {
   echo "Available updates: $TotalUpdates"
   echo "$UPDATES" | less
+}
+
+function showArchitecture {
+  uname -a | awk '{arch=$13; print arch}'
+}
+
+function totalPackages {
+  pacman -Q | wc -l
 }
 
 function installPackage {
@@ -46,6 +54,10 @@ function packageSize {
   clear
   read -r -p "Enter package name to determine its size (or press ENTER to show all installed packages size): " packageName
   LC_ALL=C.UTF-8 pacman -Qi $packageName | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | LC_ALL=C.UTF-8 sort -h
+}
+
+function totalInstalledSize {
+  pacman -Qi | awk '/^Installed Size/{size=$4; unit=$5; if(unit=="KiB"){total+=size/1024/1024} else if(unit=="MiB"){total+=size/1024} else if(unit=="GiB"){total+=size}}END{printf "%.2fGB\n", total}'
 }
 
 function removePackage {
