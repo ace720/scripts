@@ -9,14 +9,12 @@ UPDATES="$(pacman -Syu --print-format %n%v)"
 
 packageStoreDir=/var/cache/pacman/pkg/
 
-TotalUpdates="$(echo "$UPDATES" | wc -l)"
-
 function appSummary {
   echo "================================================="
   echo "SYSTEM & PACKAGES SUMMARY"
   echo "================================================="
   echo -e "System Architecture: \033[1m$(showArchitecture)\033[0m"
-  echo -e "Total Packages: \033[1m$(totalPackages) packages\033[0m"
+  echo -e "Total Packages Installed: \033[1m$(totalPackages) packages\033[0m"
   echo -e "Total Updates: \033[1m$TotalUpdates packages\033[0m"
   echo -e "Total installed packages size: \033[1m$(totalInstalledSize)\033[0m"
   echo -e "Total cached size: \033[1m$(packageCacheSize)\033[0m"
@@ -28,6 +26,13 @@ function totalUpdates {
   pacman -Syu --print-format %r/ | awk '{if($1=="core/"){total+=1} else if($1=="extra/"){total+=1}}END{print total}'
 }
 TotalUpdates="$(totalUpdates)"
+
+function viewLog {
+  cat /var/log/pacman.log | awk '{
+  if ($3 != "running" && $3 != "Running" && $3 != "synchronizing" && $3 != "starting" && $2 != "[ALPM-SCRIPTLET]" && $3 != "transaction")
+  {print $0}
+  }'
+}
 
 function showUpdate {
   echo "Available updates: $TotalUpdates"
@@ -147,7 +152,7 @@ function main {
   clear
   appSummary
   PS3="Enter option: "
-  select option in "Install & Manage" "Show package installed size" "Query package information" "Manage pacman cache" "Exit program"; do
+  select option in "Install & Manage" "Show package installed size" "Query package information" "Manage pacman cache" "View log" "Exit program"; do
     case $option in
     "Exit program")
       clear
@@ -168,6 +173,10 @@ function main {
     "Manage pacman cache")
       clear
       manageCache
+      ;;
+    "View log")
+      clear
+      viewLog
       ;;
     *)
       clear
