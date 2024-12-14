@@ -2,6 +2,7 @@
 
 set -eu -o pipefail
 
+echo "Simple package manager for Arch-linux"
 echo "Updating databases"
 
 #Global variables
