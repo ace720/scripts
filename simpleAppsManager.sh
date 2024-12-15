@@ -3,7 +3,7 @@
 set -eu -o pipefail
 
 echo "Simple package manager for Arch-linux"
-echo "Updating databases"
+echo "Updating databases..."
 
 #Global variables
 UPDATES="$(pacman -Su --print-format %n%v)"
