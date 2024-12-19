@@ -5,10 +5,10 @@ This repo contain a compilation of various scripts to automate linux chores!
 In this repo, one can find various helpful scripts written in bash for automating linux chores like cleaning up unneeded files (generated or created by the user). Because these scripts require scheduling, we will use `systemd` timers for scheduling,`systemd` timers provide a flexible mechanism for scheduling and managing jobs and services.
 
 ## **Scripts in this repo**
-1. [Script for empting folder contents.](../scripts/main/tempfile.sh)
+1. [Script for empting folder contents.](/scripts/main/tempfile.sh)
    To keep files organized, i have created a temporary directory called `temp` which stores all files that i won't be needing them after working on them, especially some other people files that happened to use my computer to accomplish that particular task. So instead of manually locating and deleting those files, this script helps empting those files without any manual intervention.
 
-2. [Script for managing installation and other services for Arch Linux.](../scripts/main/simpleAppsManager.sh) 
+2. [Script for managing installation and other services for Arch Linux.](/scripts/main/simpleAppsManager.sh) 
   This script helps people who are scared of command line, but are using linux.
 
  ## **Why we use systemd timers**
