@@ -40,6 +40,10 @@ function showUpdate {
   echo "$UPDATES" | less
 }
 
+function update {
+  pacman -Syu
+}
+
 function showArchitecture {
   uname -a | awk '{arch=$13; print arch}'
 }
@@ -115,7 +119,7 @@ function manageCache {
 
 function installNmanage {
   PS3="Select one option: "
-  select option in "Show Updates" "Install a package" "Uninstall a package" "Return to previous menu" "Exit program"; do
+  select option in "Show Updates" "Update packages" "Install a package" "Uninstall a package" "Return to previous menu" "Exit program"; do
     case $option in
     "Exit program")
       clear
@@ -124,6 +128,10 @@ function installNmanage {
     "Show Updates")
       clear
       showUpdate
+      ;;
+    "Update packages")
+      clear
+      update
       ;;
     "Install a package")
       clear
