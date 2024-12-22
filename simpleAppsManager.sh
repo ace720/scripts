@@ -4,9 +4,10 @@ set -eu -o pipefail
 
 echo "Simple package manager for Arch-linux"
 echo "Updating databases..."
+pacman -Sy >>/dev/null
 
 #Global variables
-UPDATES="$(pacman -Syu --print-format %n%v)"
+UPDATES="$(pacman -Su --print-format %n%v)"
 
 packageStoreDir=/var/cache/pacman/pkg/
 
@@ -19,12 +20,13 @@ function appSummary {
   echo -e "Total Updates: \033[1m$TotalUpdates packages\033[0m"
   echo -e "Total installed packages size: \033[1m$(totalInstalledSize)\033[0m"
   echo -e "Total cached size: \033[1m$(packageCacheSize)\033[0m"
+  echo -e "Total RAM Usage: \033[1m$(ramUsage)\033[0m"
   echo "================================================="
   echo " "
 }
 
 function totalUpdates {
-  pacman -Syu --print-format %r/ | awk '{if($1=="core/"){total+=1} else if($1=="extra/"){total+=1}}END{print total}'
+  pacman -Su --print-format %r/ | awk '{if($1=="core/"){total+=1} else if($1=="extra/"){total+=1}}END{print total}'
 }
 TotalUpdates="$(totalUpdates)"
 
@@ -41,11 +43,18 @@ function showUpdate {
 }
 
 function update {
-  pacman -Syu
+  pacman -Su
 }
 
 function showArchitecture {
   uname -a | awk '{arch=$13; print arch}'
+}
+
+function ramUsage {
+  while true; do
+    free -h
+    sleep 2
+  done
 }
 
 function totalPackages {
