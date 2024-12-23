@@ -50,13 +50,6 @@ function showArchitecture {
   uname -a | awk '{arch=$13; print arch}'
 }
 
-function ramUsage {
-  while true; do
-    free -h
-    sleep 2
-  done
-}
-
 function totalPackages {
   pacman -Q | wc -l
 }
