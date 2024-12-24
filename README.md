@@ -55,13 +55,13 @@ In this repo, one can find various helpful scripts written in bash for automatin
 
     3. Verify that the files you created contains no errors. Execute the following line (replace the serviceName if you have change the name), if the command return no output then the files have passed the verification successfully.
 
-       ```
+       ```systemd
        systemd-analyze verify /etc/systemd/system/serviceName.*
        ```
 
     4. Start the timer.
 
-       ```
+       ```systemd
        sudo systemctl start serviceName.timer
        ```
 
