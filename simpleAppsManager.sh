@@ -20,7 +20,6 @@ function appSummary {
   echo -e "Total Updates: \033[1m$TotalUpdates packages\033[0m"
   echo -e "Total installed packages size: \033[1m$(totalInstalledSize)\033[0m"
   echo -e "Total cached size: \033[1m$(packageCacheSize)\033[0m"
-  echo -e "Total RAM Usage: \033[1m$(ramUsage)\033[0m"
   echo "================================================="
   echo " "
 }
