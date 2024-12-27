@@ -89,7 +89,7 @@ In this repo, one can find various helpful scripts written in bash for automatin
 
 ## **Usage**
 
-To use scripts from this repository, make sure `temp` directory is available or after cloning the repo edit the `tempfile.sh` script and replace the variable value of `DIR={your-temp-dir}` to your temp directory liking.
+To use scripts from this repository, make sure temp directory is available or after cloning the repo edit the `tempfile.sh` script and replace the variable value of `DIR={your-temp-dir}` to your temp directory liking.
 
 1. Clone the repository to your linux-machine.
 2. Schedule the jobs using `systemd`(refer the above section on how to create a schedule) or cron.
