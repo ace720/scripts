@@ -25,7 +25,7 @@ In this repo, one can find various helpful scripts written in bash for automatin
 
     ### **2.1 Creating systemd timer**
 
-    1. First we will create a systemd service that tells `systemd` which  application to run.
+    1. First we will create a systemd service that tells systemd which  application to run.
        Create the file `/etc/systemd/system/serviceName.service` with the following content(replace the description and ExecStart with your value):
 
        ```systemd
