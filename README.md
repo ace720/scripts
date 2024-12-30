@@ -75,7 +75,7 @@ In this repo, one can find various helpful scripts written in bash for automatin
        ```
 
     5. Running missed scheduled timers.
-       If a `systemd` timer was inactive or the system was off during the expected execution time, missed events can optionally triggered immediately when the timer is activated again. To enable this,  add the configuration option `Persistent=true` to the `[Timer]` section:
+       If a systemd timer was inactive or the system was off during the expected execution time, missed events can optionally triggered immediately when the timer is activated again. To enable this,  add the configuration option `Persistent=true` to the `[Timer]` section:
 
        ```systemd
        OnCalendar=Fri *-*-* 10:00
