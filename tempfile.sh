@@ -7,9 +7,9 @@ export DIR=$HOME/Downloads/temp/
 TotalContent=$(ls -l $DIR | wc -l)
 
 function cleanDir() {
-  #check directory
+  #check directory existence
   if [[ -d "$DIR" ]]; then
-    if [[ "$(ls -A $DIR)" ]]; then
+    if [[ "$(ls -A $DIR)" ]]; then #check if directory has contents
       rm -rf $DIR*
       echo "Deleted $TotalContent contents successfully"
     else
