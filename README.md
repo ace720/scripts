@@ -66,7 +66,7 @@ In this repo, one can find various helpful scripts written in bash for automatin
        ```
 
        **NOTE**
-       This activate the timer for current boot-session only. Also make sure you have sudo previledges to start the service.`systemd` timers can also be used as regular user but regular user triggered systemd timers can only be active run during an active session. Timer and service files must be placed in `~/.config/systemd/user/`.
+       This activate the timer for current boot-session only. Also make sure you have sudo previledges to start the service.systemd timers can also be used as regular user but regular user triggered systemd timers can only be active run during an active session. Timer and service files must be placed in `~/.config/systemd/user/`.
        Following is an example of regular user starting `systemd` timer:
 
        ```systemd
