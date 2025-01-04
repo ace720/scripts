@@ -83,7 +83,7 @@ In this repo, one can find various helpful scripts written in bash for automatin
        Unit=serviceName.service
        ```
 
-    ### **2.3 For more information regarding `systemd` timer**
+    ### **2.3 For more information regarding systemd timer**
 
        * [Working with systemd timers](https://documentation.suse.com/smart/systems-management/html/systemd-working-with-timers/index.html#systemd-timer-types-realtime)
 
