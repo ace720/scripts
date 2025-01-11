@@ -4,7 +4,7 @@ This repo contain a compilation of various scripts to automate linux chores!
 
 ## **Introduction**
 
-In this repo, one can find various helpful scripts written in bash for automating linux chores like cleaning up unneeded files (generated or created by the user). Because these scripts require scheduling, we will use `systemd` timers for scheduling,`systemd` timers provide a flexible mechanism for scheduling and managing jobs and services.
+In this repo, one can find various helpful scripts written in bash for automating linux chores like cleaning up unneeded files (generated or created by the user). Because these scripts require scheduling, we will use `systemd` timers for scheduling,systemd timers provide a flexible mechanism for scheduling and managing jobs and services.
 
 ## **Scripts in this repo**
 
