@@ -20,6 +20,10 @@ function cleanDir() {
   fi
 }
 
+function welcome {
+  echo
+}
+
 cleanDir
 
 echo "Exit status: $?"
