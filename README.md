@@ -9,7 +9,7 @@ In this repo, one can find various helpful scripts written in bash for automatin
 ## **Scripts in this repo**
 
 1. [Script for empting folder contents.](tempfile.sh)
-   To keep files organized, i have created a temporary directory called `temp` which stores all files that i won't be needing them after working on them, especially some other people files that happened to use my computer to accomplish that particular task. So instead of manually locating and deleting those files, this script helps empting those files without any manual intervention.
+   To keep files organized, i have created a temporary directory called temp which stores all files that i won't be needing them after working on them, especially some other people files that happened to use my computer to accomplish that particular task. So instead of manually locating and deleting those files, this script helps empting those files without any manual intervention.
 
 2. [Script for managing installation and other services for Arch Linux.](simpleAppsManager.sh)
   This script helps people who are scared of command line, but are using linux.
