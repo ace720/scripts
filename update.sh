@@ -7,7 +7,7 @@ for update in $upddates; do
   for package in $packages; do
     if [[ $package != *.sig ]]; then
       if [[ $package == $update* ]]; then
-        pacman -U ./$package
+        pacman -U --noconfirm ./$package
       fi
     fi
   done
