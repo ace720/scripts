@@ -14,7 +14,7 @@ In this repo, one can find various helpful scripts written in bash for automatin
 2. [Script for managing installation and other services for Arch Linux.](simpleAppsManager.sh)
   This script helps people who are scared of command line, but are using linux.
 
-3. [Script for automating installation of local "from-directory" packages.](update.sh)
+3. [Script for automating package installation from local "from-directory" packages.](update.sh)
   This script will try to install/update packages from a current-working-directory. To use this you need to navigate to the directory where the actuals packages resides, and execute this particular script and you are done.
 
 ## **Why we use systemd timers**
