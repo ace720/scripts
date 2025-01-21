@@ -20,7 +20,7 @@ In this repo, one can find various helpful scripts written in bash for automatin
 ## **Why we use systemd timers**
 
  1. It is easy to schedule scripts, even starting a specific process as soon as the machine boots.
- 2. Also systemd timers provide a mechanism to run missed jobs which is an advantage over cron scheduling unless you are using anacron.
+ 2. Also 'systemd' timers provide a mechanism to run missed jobs which is an advantage over cron scheduling unless you are using anacron.
 
     ### **2.0 Systemd timer concept**
 
