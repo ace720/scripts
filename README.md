@@ -10,7 +10,7 @@ by the user). Because some of these scripts require scheduling, we will use
 systemd timers for scheduling,systemd timers provide a flexible mechanism for
 scheduling and managing jobs and services.**
 
-## Scripts in this repo
+## Scripts in this repo.
 
 1.  [Script for empting folder contents.](tempfile.sh)** To keep files organized,
     i have created a temporary directory called temp which stores all files
