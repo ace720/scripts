@@ -7,7 +7,7 @@ BRANCH='development'
 
 git fetch $URL
 
-CHANGES=$(git log HEAD..origin/$BRANCH --oneline)
+CHANGES=$(git log origin..HEAD/$BRANCH --oneline)
 
 if [ -z "$CHANGES" ]; then
     echo "No changes detected in branch $BRANCH."
