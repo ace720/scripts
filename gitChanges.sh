@@ -3,7 +3,7 @@
 #Variables
 URL
 #branch to check
-BRANCH='development'
+BRANCH='main'
 
 git fetch $URL
 
