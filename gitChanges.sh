@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-<<<<<<< HEAD
+
 # Configuration
 REPO_URL="git@1"
 BRANCH="dev"
@@ -13,7 +13,7 @@ LAST_COMMIT_FILE="$TRACKING_DIR/last_commit.txt"
 URL
 #branch to check
 BRANCH='main'
->>>>>>> 7d0450e4151662a5f4ef88fcfafa2859999aa472
+
 
 # Ensure tracking directory exists
 [[ -d $TRACKING_DIR ]] && cd $TRACKING_DIR || mkdir -p $TRACKING_DIR
